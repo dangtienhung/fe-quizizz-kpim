@@ -1,5 +1,5 @@
-import LayoutDefault from './layouts/LayoutDefault';
+import HomePage from "./views/home/HomePage";
 
 export default function Home() {
-	return <LayoutDefault />;
+	return <HomePage />;
 }
