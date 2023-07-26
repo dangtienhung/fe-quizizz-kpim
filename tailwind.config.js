@@ -4,6 +4,10 @@ module.exports = {
 		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./node_modules/flowbite-react/**/*.js',
+		'./pages/**/*.{ts,tsx}',
+		'./pages/**/*.{ts,tsx}',
+		'./public/**/*.html',
 	],
 	theme: {
 		extend: {
@@ -16,5 +20,5 @@ module.exports = {
 			colors: { primary: '#8854C0', secondary: '#72737D', 'gray-1': '#E9E9EB' },
 		},
 	},
-	plugins: [require('daisyui')],
+	plugins: [require('daisyui'), require('flowbite/plugin')],
 };

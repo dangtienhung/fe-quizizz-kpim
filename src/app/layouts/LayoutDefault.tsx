@@ -1,6 +1,6 @@
-import Footer from "../components/footer/Footer";
-import Header from "../components/header/Header";
-import React from "react";
+import Footer from '../components/footer/Footer';
+import Header from '../components/header/Header';
+import React from 'react';
 
 interface LayoutDefaultProps {
 	children?: React.ReactNode;
@@ -12,7 +12,7 @@ export default function LayoutDefault({
 	className,
 }: LayoutDefaultProps) {
 	return (
-		<div className={`${className} bg-[#F9F9F9] min-h-screen`}>
+		<div className={`${className} bg-[#F9F9F9] min-h-screen flex flex-col`}>
 			<Header />
 			{children}
 			<Footer />

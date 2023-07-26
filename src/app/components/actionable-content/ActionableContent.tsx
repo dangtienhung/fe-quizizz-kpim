@@ -57,14 +57,14 @@ export default function ActionableContent() {
 							</h2>
 							<div className="flex justify-around items-center gap-3 mt-2">
 								<Link
-									href={`/setting`}
+									href={`/join/settings`}
 									className="inline-block text-xs text-[#EFA959]"
 								>
 									Chỉnh sửa hồ sơ
 								</Link>
 								<div className="h-1 w-1 rounded-full bg-[#EFA959]"></div>
 								<Link
-									href={`/setting`}
+									href={`/join/actives`}
 									className="inline-block text-xs text-[#EFA959]"
 								>
 									Xem hoạt động
