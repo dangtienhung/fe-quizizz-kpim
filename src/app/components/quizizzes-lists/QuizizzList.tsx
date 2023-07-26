@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import Card from '../card/Card';
 import Link from 'next/link';
 import React from 'react';
