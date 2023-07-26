@@ -1,5 +1,6 @@
-import Menu from '@/app/modules/header/Menu';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
 import Logo from '../logo/Logo';
+import Menu from '@/app/modules/header/Menu';
 
 export default function Header() {
 	return (
@@ -10,6 +11,9 @@ export default function Header() {
 				<button className="btn bg-gray-1 font-bold text-black">Đăng ký</button>
 				<button className="btn bg-primary hover:bg-primary font-bold text-white">
 					Đăng nhập
+				</button>
+				<button className="hidden btn bg-gray-1 font-bold text-black">
+					<AiOutlinePlusCircle size={24} /> Tạo một bài quizizz
 				</button>
 			</div>
 		</div>

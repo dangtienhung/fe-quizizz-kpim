@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Card from "../card/Card";
-import Link from "next/link";
+
+import Card from '../card/Card';
+import Link from 'next/link';
+import React from 'react';
 
 export default function QuizizzList() {
 	return (
@@ -15,7 +16,7 @@ export default function QuizizzList() {
 					Xem thêm
 				</Link>
 			</div>
-			<div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
+			<div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
 				<Card />
 				<Card />
 				<Card />
