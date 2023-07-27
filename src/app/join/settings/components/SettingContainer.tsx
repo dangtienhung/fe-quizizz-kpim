@@ -6,6 +6,7 @@ import { Button, Modal } from 'flowbite-react';
 import React, { useState } from 'react';
 
 import { IoIosArrowForward } from 'react-icons/io';
+import { v4 as uuidv4 } from 'uuid';
 
 interface SettingContainerProps {
 	icon: React.ReactNode;
@@ -29,22 +30,20 @@ export default function SettingContainer({
 				</div>
 				<div className="">
 					{info.map((item, index) => (
-						<>
-							<div
-								className="flex justify-between items-center mb-3 select-none"
-								key={index}
-								onClick={() => props.setOpenModal('dismissible')}
-							>
-								<div className="flex-1 cursor-pointer">
-									<h3 className="font-medium text-lg">{item.title}</h3>
-									{item.content && (
-										<span className="text-[#AAC7E7]">{item.content}</span>
-									)}
-								</div>
-								<span>
-									<IoIosArrowForward />
-								</span>
+						<div
+							className="flex justify-between items-center mb-3 select-none"
+							onClick={() => props.setOpenModal('dismissible')}
+							key={index}
+						>
+							<div className="flex-1 cursor-pointer">
+								<h3 className="font-medium text-lg">{item.title}</h3>
+								{item.content && (
+									<span className="text-[#AAC7E7]">{item.content}</span>
+								)}
 							</div>
+							<span>
+								<IoIosArrowForward />
+							</span>
 							<Modal
 								dismissible
 								show={props.openModal === 'dismissible'}
@@ -53,7 +52,7 @@ export default function SettingContainer({
 								<Modal.Header>{item.title}</Modal.Header>
 								<Modal.Body>{item.content && <p>{item.content}</p>}</Modal.Body>
 							</Modal>
-						</>
+						</div>
 					))}
 				</div>
 			</div>
