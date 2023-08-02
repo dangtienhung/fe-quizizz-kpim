@@ -3,6 +3,7 @@
 import { BiUserCheck } from 'react-icons/bi';
 import { FaUsers } from 'react-icons/fa';
 import Header from '../../components/Header';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { VscDebugStart } from 'react-icons/vsc';
@@ -16,10 +17,12 @@ export default function PreGame() {
 					<div className="w-[25%]">
 						<div className="p-6 bg-[#111111] rounded-xl">
 							<div className="flex items-start gap-3 w-full">
-								<img
+								<Image
 									src="https://genk.mediacdn.vn/2018/8/22/kimi-ni-todoke-cover-1534914198264292755042.jpg"
 									alt="image-quizizz"
 									className="w-[56px] h-[56px] rounded-xl object-cover"
+									width={56}
+									height={56}
 								/>
 								<div className="w-full overflow-hidden">
 									<p className="text-lg font-medium truncate">

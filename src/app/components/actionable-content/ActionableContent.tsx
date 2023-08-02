@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -26,10 +27,12 @@ export default function ActionableContent() {
 				</div>
 				<div className="hidden lg:w-[30%] p-4 bg-white rounded-2xl flex-col shadow-md h-[215px] lg:flex justify-center items-center">
 					<div className="mb-5 hidden">
-						<img
+						<Image
 							src="https://images.careerbuilder.vn/content/images/cung-bach-duong-CareerBuilder-4.jpg"
 							alt="Picture of the author"
 							className="h-[80px] w-[80px] rounded-full object-cover"
+							height={80}
+							width={80}
 						/>
 					</div>
 					<div className="hidden">
@@ -46,10 +49,12 @@ export default function ActionableContent() {
 
 					<div className="">
 						<div className="mb-5 text-center">
-							<img
+							<Image
 								src="https://staticg.sportskeeda.com/editor/2022/02/b9427-16438410040408-1920.jpg"
 								alt="Picture of the author"
 								className="h-[80px] w-[80px] rounded-full object-cover mx-auto"
+								height={80}
+								width={80}
 							/>
 						</div>
 						<div className="">

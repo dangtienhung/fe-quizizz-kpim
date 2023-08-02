@@ -3,6 +3,7 @@ import { BiSolidUser } from 'react-icons/bi';
 import { Button } from 'flowbite-react';
 import Header from '@/app/join/components/Header';
 import { HiDatabase } from 'react-icons/hi';
+import Image from 'next/image';
 import QuestionReview from './QuestionReview';
 import QuizRecommendation from './QuizRecommendation';
 import React from 'react';
@@ -28,10 +29,12 @@ export default function Summary() {
 					<div>
 						<div className="flex justify-between items-center px-6 mb-5 py-5 bg-[#000000] text-white rounded-xl">
 							<div className="flex justify-start items-center gap-4">
-								<img
+								<Image
 									src="https://staticg.sportskeeda.com/editor/2022/02/b9427-16438410040408-1920.jpg"
 									alt="name"
 									className="w-[76px] h-[76px] rounded-full object-cover"
+									width={76}
+									height={76}
 								/>
 								<span className="text-xl text-white font-medium">me</span>
 							</div>

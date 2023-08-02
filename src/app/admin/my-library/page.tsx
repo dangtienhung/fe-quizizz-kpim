@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import { AiOutlineBars } from 'react-icons/ai';
 import { BiSolidUser } from 'react-icons/bi';
+import Image from 'next/image';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 export default function MyLibrary() {
@@ -34,10 +35,12 @@ export default function MyLibrary() {
 				</div>
 				<div className="w-full flex-1">
 					<div className="h-full w-full hidden">
-						<img
+						<Image
 							src="https://cf.quizizz.com/image/emptystate-letscreate.png"
 							alt="empty-state"
 							className="h-[240px] w-[240px] object-cover mx-auto"
+							height={240}
+							width={240}
 						/>
 						<p className="text-center text-[#222] text-sm font-semibold my-2">
 							Tạo quiz hoặc bài học đầu tiên của bạn
@@ -56,10 +59,12 @@ export default function MyLibrary() {
 						<div className="flex flex-col gap-3">
 							<div className="p-2 cursor-pointer rounded shadow bg-white flex items-start gap-3">
 								<div className="bg-primary w-[104px] h-[104px] rounded overflow-hidden">
-									<img
+									<Image
 										src="https://cf.quizizz.com/img/logos/new/logo_placeholder_sm.png?w=200&h=200"
 										alt="ahihi"
 										className="w-full h-full object-cover"
+										height={104}
+										width={104}
 									/>
 								</div>
 								<div className="flex-1">
@@ -75,10 +80,12 @@ export default function MyLibrary() {
 									</div>
 									<div className="flex items-center justify-between mt-auto">
 										<div className="flex items-center gap-3">
-											<img
+											<Image
 												src="https://genk.mediacdn.vn/2018/8/22/maxresdefault-3-1534914028092859095407.jpg"
 												alt="logo"
 												className="h-6 w-6 rounded-full object-cover"
+												height={24}
+												width={24}
 											/>
 											<span>Đặng Tiến Hưng</span>
 										</div>
