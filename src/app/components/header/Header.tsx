@@ -4,6 +4,7 @@ import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { useCallback, useState } from 'react';
 
 import { AiOutlinePlusCircle } from 'react-icons/ai';
+import Link from 'next/link';
 import Logo from '../logo/Logo';
 import Menu from '@/app/modules/header/Menu';
 import SocialButton from './components/SocialButton';
@@ -41,9 +42,11 @@ export default function Header() {
 					<button className="btn bg-primary hover:bg-primary font-bold text-white">
 						Đăng nhập
 					</button>
-					<button className="hidden btn bg-gray-1 font-bold text-black">
-						<AiOutlinePlusCircle size={24} /> Tạo một bài quizizz
-					</button>
+					<Link href={`/admin`} className="inline-block">
+						<button className="btn bg-gray-1 font-bold text-black">
+							<AiOutlinePlusCircle size={24} /> Tạo một bài quizizz
+						</button>
+					</Link>
 				</div>
 			</div>
 			<Modal
