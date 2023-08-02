@@ -46,8 +46,8 @@ export default function MyLibrary() {
 							Tạo quiz hoặc bài học đầu tiên của bạn
 						</p>
 						<p className="text-center text-sm my-2">
-							Pull in questions from the Quizizz library or make your own. It's
-							quick and easy
+							Pull in questions from the Quizizz library or make your own. quick
+							and easy
 						</p>
 						<div className="mt-8">
 							<div className="py-1 text-center px-2 rounded-md bg-primary text-white font-bold w-[200px] mx-auto">
