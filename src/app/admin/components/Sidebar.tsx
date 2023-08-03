@@ -62,29 +62,59 @@ export default function Sidebar() {
 				dismissible
 				show={props.openModal === 'dismissible'}
 				onClose={() => props.setOpenModal(undefined)}
+				size={'sm'}
 			>
-				<Modal.Header>Terms of Service</Modal.Header>
 				<Modal.Body>
-					<div className="space-y-6">
-						<p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Dignissimos, incidunt.
-						</p>
-						<p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-							cupiditate veniam, voluptas odit consequuntur quisquam eligendi.
-							Autem nemo magnam dolore?
-						</p>
+					<div className="">
+						<h2 className="text-xl text-black font-semibold text-center mb-6">
+							Bạn muốn tạo gì?
+						</h2>
+						<div
+							className="rounded-lg mb-5 border hover:bg-[rgb(237,230,246)] hover:border-primary cursor-pointer gap-3 flex flex-col px-4 pt-3 pb-4"
+							style={{ boxShadow: '0 4px #b6b6b6' }}
+						>
+							<Link
+								href={`/admin/quiz/edit/quizEditId`}
+								className="inline-block h-full w-full"
+							>
+								<div className="flex items-center gap-3">
+									<Image
+										src={`https://cf.quizizz.com/img/illustrations/quiz.png`}
+										alt="empty-state"
+										height={48}
+										width={48}
+										className="rounded-full object-cover"
+									/>
+									<span className="font-bold text-xl text-[#090909]">Quiz</span>
+								</div>
+								<span className="text-sm text-[#6d6d6d] text-left">
+									Đánh giá và thực hành tạo động lực với các câu hỏi tương tác
+								</span>
+							</Link>
+						</div>
+						<div
+							className="rounded-lg border mb-5 hover:bg-[rgb(237,230,246)] hover:border-primary cursor-pointer gap-3 flex flex-col px-4 pt-3 pb-4"
+							style={{ boxShadow: '0 4px #b6b6b6' }}
+						>
+							<div className="flex items-center gap-3">
+								<Image
+									src={`https://cf.quizizz.com/img/illustrations/lesson.png`}
+									alt="empty-state"
+									height={48}
+									width={48}
+									className="rounded-full object-cover"
+								/>
+								<span className="font-bold text-xl text-[#090909]">
+									Bài học
+								</span>
+							</div>
+							<span className="text-sm text-[#6d6d6d] text-left">
+								Thêm các slide vui nhộn và và tương tác vào các bài đánh giá mà
+								học sinh yêu thích
+							</span>
+						</div>
 					</div>
 				</Modal.Body>
-				<Modal.Footer>
-					<Button onClick={() => props.setOpenModal(undefined)}>
-						I accept
-					</Button>
-					<Button color="gray" onClick={() => props.setOpenModal(undefined)}>
-						Decline
-					</Button>
-				</Modal.Footer>
 			</Modal>
 		</>
 	);

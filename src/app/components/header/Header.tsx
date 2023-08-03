@@ -42,7 +42,7 @@ export default function Header() {
 					<button className="btn bg-primary hover:bg-primary font-bold text-white">
 						Đăng nhập
 					</button>
-					<Link href={`/admin`} className="inline-block">
+					<Link href={`/admin/my-library`} className="inline-block">
 						<button className="btn bg-gray-1 font-bold text-black">
 							<AiOutlinePlusCircle size={24} /> Tạo một bài quizizz
 						</button>
