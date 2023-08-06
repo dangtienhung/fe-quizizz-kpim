@@ -1,7 +1,7 @@
 import { BsCheckLg } from 'react-icons/bs';
-import { CiStopwatch } from 'react-icons/ci';
 import { FaSave } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -61,10 +61,12 @@ const Footer = () => {
 				<button className="flex gap-1 items-center bg-[#161616] text-sm font-semibold rounded py-1 px-2">
 					Hủy
 				</button>
-				<button className="flex gap-1 items-center bg-[#161616] rounded py-1 px-2">
-					<FaSave />
-					<span className="text-sm font-semibold text-white">Lưu</span>
-				</button>
+				<Link href={`/admin/quiz/lists`} className="inline-block">
+					<button className="flex gap-1 items-center bg-[#161616] rounded py-1 px-2">
+						<FaSave />
+						<span className="text-sm font-semibold text-white">Lưu</span>
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
