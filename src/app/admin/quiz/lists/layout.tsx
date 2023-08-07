@@ -1,3 +1,4 @@
+import Header from '../components/Header';
 import HeaderQuiz from '../../components/HeaderQuiz';
 import type { Metadata } from 'next';
 
@@ -15,7 +16,8 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<div>
-					{<HeaderQuiz />}
+					<Header />
+					<HeaderQuiz className="left-[40%] max-w-2xl" />
 					{children}
 				</div>
 			</body>

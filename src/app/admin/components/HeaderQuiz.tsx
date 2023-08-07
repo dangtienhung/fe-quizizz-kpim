@@ -4,14 +4,21 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import React from 'react';
 import { TextInput } from 'flowbite-react';
 
-const HeaderQuiz = () => {
+interface HeaderQuizProps {
+	children?: React.ReactNode;
+	className?: string;
+}
+
+const HeaderQuiz = ({ className, children }: HeaderQuizProps) => {
 	return (
-		<div className="bg-white p-4 rounded-b fixed top-14 left-1/2 -translate-x-1/2 shadow w-full max-w-2xl">
-			<h2 className="font-medium mb-2">
+		<div
+			className={`bg-white p-4 rounded-b fixed top-14 z-50 left-1/2 -translate-x-1/2 shadow w-full max-w-2xl ${className}`}
+		>
+			<h2 className="mb-2 font-medium">
 				Dịch chuyển tức thời từ thư viện Quizizz
 			</h2>
-			<div className="border rounded p-1">
-				<form className="w-full flex items-center">
+			<div className="p-1 border rounded">
+				<form className="flex items-center w-full">
 					<TextInput
 						icon={AiOutlineSearch}
 						placeholder="Tìm kiếm từ hàng triệu câu hỏi"

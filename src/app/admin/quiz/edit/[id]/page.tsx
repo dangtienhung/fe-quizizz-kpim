@@ -1,5 +1,6 @@
 import { BsCheckSquare } from 'react-icons/bs';
 import HeaderQuiz from '../../../components/HeaderQuiz';
+import Link from 'next/link';
 import React from 'react';
 
 const typeQuestions = [
@@ -33,9 +34,12 @@ export default function QuizizzEdit() {
 									<span className="bg-[#2D9DA6] p-1 rounded text-white">
 										{typeQuestion.icon}
 									</span>
-									<span className="text-[#222222] font-semibold text-sm">
+									<Link
+										href={`/admin/quiz/questions`}
+										className="text-[#222222] font-semibold text-sm"
+									>
 										{typeQuestion.name}
-									</span>
+									</Link>
 								</div>
 							))}
 						</div>
