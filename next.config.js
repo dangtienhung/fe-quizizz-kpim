@@ -10,6 +10,7 @@ const nextConfig = {
 			{ protocol: 'https', hostname: 'images.careerbuilder.vn' },
 			{ protocol: 'https', hostname: 'staticg.sportskeeda.com' },
 			{ protocol: 'https', hostname: 'genk.mediacdn.vn' },
+			{ protocol: 'https', hostname: 'ui-avatars.com' },
 		],
 	},
 };

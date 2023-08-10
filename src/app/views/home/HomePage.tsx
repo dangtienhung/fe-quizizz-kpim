@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import LayoutDefault from "../../layouts/LayoutDefault";
-import React from "react";
-import ActionableContent from "@/app/components/actionable-content/ActionableContent";
-import FeatureQuizizz from "@/app/components/featured-quizizzs/FeatureQuizizz";
+
+import ActionableContent from '@/app/components/actionable-content/ActionableContent';
+import FeatureQuizizz from '@/app/components/featured-quizizzs/FeatureQuizizz';
+import LayoutDefault from '../../layouts/LayoutDefault';
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 export default function HomePage() {
 	return (
@@ -11,6 +13,7 @@ export default function HomePage() {
 				<ActionableContent />
 				<FeatureQuizizz />
 			</LayoutDefault>
+			<ToastContainer />
 		</>
 	);
 }
