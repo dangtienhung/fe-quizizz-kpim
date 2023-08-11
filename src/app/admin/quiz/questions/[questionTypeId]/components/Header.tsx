@@ -3,6 +3,7 @@
 import { BsArrowLeftShort, BsCheckSquare } from 'react-icons/bs';
 import { CustomFlowbiteTheme, Dropdown } from 'flowbite-react';
 
+import Link from 'next/link';
 import React from 'react';
 
 const customTheme: CustomFlowbiteTheme['select'] = {
@@ -13,10 +14,12 @@ const Header = () => {
 	return (
 		<div className="h-14 p-2 bg-[#381535] text-white">
 			<div className="flex items-center justify-between h-full">
-				<div className="bg-[#60445D] cursor-pointer flex rounded py-2 px-3 justify-center items-center gap-1">
-					<BsArrowLeftShort />
-					<span className="text-sm">Quay lại</span>
-				</div>
+				<Link className="inline-block" href="/admin/quiz/edit/quizEditId">
+					<div className="bg-[#60445D] cursor-pointer flex rounded py-2 px-3 justify-center items-center gap-1">
+						<BsArrowLeftShort />
+						<span className="text-sm">Quay lại</span>
+					</div>
+				</Link>
 				<div>
 					<details className="dropdown">
 						<summary className="m-1 btn">open or close</summary>

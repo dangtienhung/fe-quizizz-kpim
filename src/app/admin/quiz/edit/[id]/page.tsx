@@ -2,6 +2,7 @@ import { BsCheckSquare } from 'react-icons/bs';
 import HeaderQuiz from '../../../components/HeaderQuiz';
 import Link from 'next/link';
 import React from 'react';
+import { getAllQuestionType } from '@/api/quizizzQuestionType';
 
 const typeQuestions = [
 	{ id: 1, name: 'Đa lựa chọn', icon: <BsCheckSquare /> },
@@ -12,7 +13,8 @@ const typeQuestions = [
 	{ id: 6, name: 'thả xuống', icon: <BsCheckSquare /> },
 ];
 
-export default function QuizizzEdit() {
+export default async function QuizizzEdit() {
+	const quizQuestionTypes = await getAllQuestionType();
 	return (
 		<div>
 			<HeaderQuiz />
@@ -26,21 +28,22 @@ export default function QuizizzEdit() {
 							Đánh giá
 						</h3>
 						<div className="grid grid-cols-2 gap-2 px-4">
-							{typeQuestions.map((typeQuestion) => (
-								<div
+							{quizQuestionTypes.map((typeQuestion: any) => (
+								<Link
+									href={`/admin/quiz/questions/create`}
 									className="flex duration-100 items-center gap-1 rounded hover:bg-[#EDE6F6] cursor-pointer p-1"
-									key={typeQuestion.id}
+									key={typeQuestion._id}
 								>
 									<span className="bg-[#2D9DA6] p-1 rounded text-white">
-										{typeQuestion.icon}
+										<BsCheckSquare />
 									</span>
-									<Link
-										href={`/admin/quiz/questions`}
+									<div
+										// href={`/admin/quiz/questions/${typeQuestion._id}}`}
 										className="text-[#222222] font-semibold text-sm"
 									>
 										{typeQuestion.name}
-									</Link>
-								</div>
+									</div>
+								</Link>
 							))}
 						</div>
 					</div>

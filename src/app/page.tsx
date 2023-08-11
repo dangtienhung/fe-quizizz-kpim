@@ -1,5 +1,10 @@
 import HomePage from './views/home/HomePage';
+import Providers from '@/utils/provider';
 
 export default function Home() {
-	return <HomePage />;
+	return (
+		<Providers>
+			<HomePage />;
+		</Providers>
+	);
 }
